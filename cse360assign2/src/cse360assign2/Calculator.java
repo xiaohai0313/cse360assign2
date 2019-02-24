@@ -14,27 +14,51 @@ public class Calculator {
 	private int total;
 	
 	public Calculator () {
-		total = 0;  // not needed - included for clarity
+		total = 0;  // initial variable value
 	}
 	
+	/**
+	 * This method should return the current total value
+	 * @return
+	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
+	/**
+	 * This method should add parameter to the total variable
+	 * @param value
+	 */
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	
+	/**
+	 * This method should subtract parameter from total variable
+	 * @param value
+	 */
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
+	/**
+	 * This method should multiply the total variable by the parameter
+	 * @param value
+	 */
 	public void multiply (int value) {
-		
+		total = total * value;
 	}
 	
+	/**
+	 * This method should divide the total by the parameter, if parameter is zero
+	 * set the total to zero
+	 * @param value
+	 */
 	public void divide (int value) {
-		
+		if (value == 0)
+			total = 0;
+		else 
+			total = total / value;
 	}
 	
 	public String getHistory () {
