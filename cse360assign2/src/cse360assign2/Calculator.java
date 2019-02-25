@@ -12,14 +12,14 @@ package cse360assign2;
 public class Calculator {
 
 	private int total;
-	
+	private String output = "";
 	public Calculator () {
 		total = 0;  // initial variable value
 	}
 	
 	/**
 	 * This method should return the current total value
-	 * @return
+	 * @return - current total value
 	 */
 	public int getTotal () {
 		return total;
@@ -27,41 +27,49 @@ public class Calculator {
 	
 	/**
 	 * This method should add parameter to the total variable
-	 * @param value
+	 * @param value - the value to be add
 	 */
 	public void add (int value) {
 		total = total + value;
+		output = output + " + " + value;
 	}
 	
 	/**
 	 * This method should subtract parameter from total variable
-	 * @param value
+	 * @param value - the value to be subtracted
 	 */
 	public void subtract (int value) {
 		total = total - value;
+		output = output + " - " + value;
 	}
 	
 	/**
 	 * This method should multiply the total variable by the parameter
-	 * @param value
+	 * @param value - the value to be multiplied
 	 */
 	public void multiply (int value) {
 		total = total * value;
+		output = output + " * " + value;
 	}
 	
 	/**
 	 * This method should divide the total by the parameter, if parameter is zero
 	 * set the total to zero
-	 * @param value
+	 * @param value - the value to be divided
 	 */
 	public void divide (int value) {
 		if (value == 0)
-			total = 0;
+			total = (int) Math.floor(total / value);
 		else 
 			total = total / value;
+		output = output + " / " + value;
 	}
 	
+	/**
+	 * The getHistory method will return a history of all actions as a String.
+	 * @return - calculation history String
+	 */
 	public String getHistory () {
-		return "";
+		return output;
 	}
 }
