@@ -14,7 +14,7 @@ public class Calculator {
 	private int total;
 	private String output = "0";
 	public Calculator () {
-		total = 0;  // initial variable value
+		total = 0;  //  initial variable value
 	}
 	
 	/**
