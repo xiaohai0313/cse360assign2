@@ -1,7 +1,7 @@
 package cse360assign2;
 /**
  * This class implements a simple calculator structure, calculator could do 
- * add, subtract, multiply and add operation, display calculated result.
+ * add, subtract, multiply and add operation, display calculated history.
  * 
  * 
  * @author Xueling Meng
